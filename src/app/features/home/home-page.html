@@ -1,0 +1,4 @@
+<section class="rounded-lg bg-white p-6">
+  <h1 class="text-title text-ink">{{ 'home.hello' | translate: { name: auth.user()?.name ?? '' } }}</h1>
+  <p class="mt-1 text-muted">{{ 'home.sub' | translate }}</p>
+</section>

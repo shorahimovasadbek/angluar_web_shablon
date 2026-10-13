@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "Asosiy",
+    "profile": "Profil"
+  },
+  "common": {
+    "error": "Nimadir xato ketdi. Qaytadan urinib koʻring",
+    "pw_show": "Parolni koʻrsatish",
+    "pw_hide": "Parolni yashirish"
+  },
+  "lang": {
+    "ru": "Русский",
+    "uz": "Oʻzbekcha"
+  },
+  "auth": {
+    "title": "Kirish",
+    "sub": "Telefon raqam va parolni kiriting",
+    "phone": "Telefon",
+    "pw": "Parol",
+    "pw_ph": "Kamida 6 ta belgi",
+    "btn": "Kirish",
+    "err": {
+      "phone": "Telefon raqamni toʻliq kiriting",
+      "pw_short": "Parol kamida 6 ta belgidan iborat boʻlsin"
+    }
+  },
+  "home": {
+    "hello": "Assalomu alaykum, {{name}}!",
+    "sub": "Bu shablonning boshlangʻich sahifasi"
+  },
+  "profile": {
+    "lang": "Ilova tili",
+    "logout": "Chiqish",
+    "saved": "Saqlandi"
+  }
+}

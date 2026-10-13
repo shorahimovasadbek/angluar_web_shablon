@@ -1,0 +1,19 @@
+<div class="flex max-w-xl flex-col gap-4">
+  @if (auth.user(); as user) {
+    <section class="rounded-lg bg-white p-6">
+      <p class="text-title text-ink">{{ user.name }}</p>
+      <p class="text-muted">{{ phone(user.phone) }}</p>
+    </section>
+  }
+
+  <section class="rounded-lg bg-white p-6">
+    <p class="mb-3 text-label text-ink-2">{{ 'profile.lang' | translate }}</p>
+    <div class="flex gap-2">
+      @for (l of langs; track l) {
+        <ui-button size="sm" [variant]="lang.current() === l ? 'primary' : 'secondary'" (click)="setLang(l)">
+          {{ 'lang.' + l | translate }}
+        </ui-button>
+      }
+    </div>
+  </section>
+</div>

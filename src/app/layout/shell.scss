@@ -1,0 +1,30 @@
+:host { display: block; min-height: 100%; }
+
+.container { max-width: 1120px; margin: 0 auto; padding-inline: 16px; }
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 64px;
+  border-bottom: 1px solid var(--color-line);
+  background: var(--color-white);
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  font: inherit;
+  font-weight: 500;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+
+  &:hover { background: var(--color-surface); color: var(--color-ink); }
+  &.is-active { background: var(--color-brand-soft); color: var(--color-brand); }
+}

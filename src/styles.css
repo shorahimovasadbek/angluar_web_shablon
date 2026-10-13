@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/*
+ * Dizayn tokenlari — yagona manba.
+ * Tailwind klasslari (bg-brand, text-ink, rounded-md ...) va komponent CSS (var(--color-brand)) shu yerdan oladi.
+ */
+@theme static {
+  --color-*: initial;
+  --color-white: #FFFFFF;
+
+  /* Akcent */
+  --color-brand: #2563EB;
+  --color-brand-hover: #1D4ED8;
+  --color-brand-active: #1E40AF;
+  --color-brand-soft: #EFF6FF;
+  --color-brand-disabled: #2563EB66;
+  --color-brand-ring: #2563EB40;
+
+  /* Matn */
+  --color-ink: #0F172A;
+  --color-ink-2: #334155;
+  --color-muted: #4A5565;
+  --color-subtle: #64748B;
+
+  /* Yuzalar */
+  --color-line: #E2E8F0;
+  --color-surface: #F3F6F9;
+  --color-pressed: #EBEFF5;
+
+  /* Holatlar */
+  --color-success: #15803D;
+  --color-danger: #EF4444;
+  --color-danger-active: #BF3636;
+  --color-danger-disabled: #EF444466;
+
+  /* Radius */
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* Shrift */
+  --font-sans: "Inter Variable", system-ui, sans-serif;
+  --text-title: 20px;
+  --text-title--line-height: 26px;
+  --text-title--font-weight: 700;
+  --text-body: 15px;
+  --text-body--line-height: 22px;
+  --text-body--font-weight: 400;
+  --text-label: 14px;
+  --text-label--line-height: 20px;
+  --text-label--font-weight: 600;
+  --text-caption: 13px;
+  --text-caption--line-height: 18px;
+  --text-caption--font-weight: 400;
+  --text-button: 15px;
+  --text-button--line-height: 20px;
+  --text-button--font-weight: 600;
+}
+
+@layer base {
+  html, body { height: 100%; }
+  body {
+    background: var(--color-surface);
+    color: var(--color-ink-2);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    -webkit-font-smoothing: antialiased;
+  }
+}

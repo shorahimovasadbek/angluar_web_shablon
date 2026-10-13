@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="container flex h-full items-center gap-6">
+    <a routerLink="/home" class="text-title text-ink">Template</a>
+
+    <nav class="flex gap-1">
+      <a routerLink="/home" routerLinkActive="is-active" class="nav-link">
+        <svg lucideHouse aria-hidden="true"></svg>{{ 'nav.home' | translate }}
+      </a>
+      <a routerLink="/profile" routerLinkActive="is-active" class="nav-link">
+        <svg lucideUser aria-hidden="true"></svg>{{ 'nav.profile' | translate }}
+      </a>
+    </nav>
+
+    <button type="button" class="nav-link ml-auto" (click)="auth.logout()">
+      <svg lucideLogOut aria-hidden="true"></svg>{{ 'profile.logout' | translate }}
+    </button>
+  </div>
+</header>
+
+<main class="container py-6">
+  <router-outlet />
+</main>

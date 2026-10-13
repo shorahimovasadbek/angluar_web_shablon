@@ -1,0 +1,36 @@
+<label class="field">
+  @if (label()) {
+    <span class="label">{{ label() }}</span>
+  }
+
+  <span class="box" [class.is-focus]="focused()" [class.is-error]="!!error()" [class.is-disabled]="disabled()">
+    @if (prefix()) {
+      <span class="pre">{{ prefix() }}</span>
+      <span class="sep"></span>
+    }
+    <input #el
+      [type]="type()" [value]="text()" [placeholder]="ph()" [disabled]="disabled()"
+      [attr.inputmode]="kind() === 'phone' ? 'numeric' : null"
+      [attr.autocomplete]="autocomplete()"
+      [attr.aria-invalid]="!!error() || null"
+      (input)="onInput()" (focus)="focused.set(true)" (blur)="onBlur()" />
+    @if (kind() === 'password') {
+      <button type="button" class="eye"
+        (pointerdown)="$event.preventDefault()"
+        (click)="showPw.set(!showPw())"
+        [attr.aria-label]="(showPw() ? 'common.pw_hide' : 'common.pw_show') | translate">
+        @if (showPw()) {
+          <svg lucideEyeOff [size]="20" aria-hidden="true"></svg>
+        } @else {
+          <svg lucideEye [size]="20" aria-hidden="true"></svg>
+        }
+      </button>
+    }
+  </span>
+
+  @if (error()) {
+    <span class="error"><svg lucideCircleAlert [size]="16" aria-hidden="true"></svg>{{ error() | translate }}</span>
+  } @else if (hint()) {
+    <span class="hint">{{ hint() }}</span>
+  }
+</label>
